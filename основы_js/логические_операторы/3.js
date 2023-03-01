@@ -1,7 +1,21 @@
 'use strict';
 
-//Что выведет код ниже?
-alert(1 && null && 2);
+let userLogin = prompt("Кто там?", '');
 
+if (userLogin === 'Админ' || userLogin === 'admin') {
 
-//null
+    let userPass = prompt('Пароль?', '');
+
+    if (userPass === 'Я главный') {
+        alert('Здравствуйте!');
+    } else if (userPass === '' || userPass === null) {
+        alert('Отменено');
+    } else {
+        alert('Неверный пароль');
+    }
+
+} else if (userLogin === '' || userLogin === null) {
+    alert('Отменено');
+} else {
+    alert("Я вас не знаю");
+}
